@@ -11,3 +11,6 @@ class StudentRecord(models.Model):
         ('R','Researcher'))
 
     student_level = models.CharField(max_length=30, choices= type)
+
+    def __str__(self):
+        return self.student_name_en +' '+ str(self.student_ID) +' '+ self.student_level
