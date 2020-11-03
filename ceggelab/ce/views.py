@@ -2,4 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 def HomePage(request):
-    return HttpResponse('<h1>Hello CEGGELAB!!</h1>')
+    return render(request,'ce/home.html')
+
+def AboutPage(request):
+    return render(request,'ce/about.html')
+def ContactUs(request):
+    return render(request,'ce/contactus.html')
