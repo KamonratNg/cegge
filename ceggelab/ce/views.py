@@ -6,5 +6,12 @@ def HomePage(request):
 
 def AboutPage(request):
     return render(request,'ce/about.html')
+
 def ContactUs(request):
     return render(request,'ce/contactus.html')
+
+def People(request):
+    return render(request,'ce/people.html')
+
+def Student(request):
+    return render(request,'ce/student.html')    
