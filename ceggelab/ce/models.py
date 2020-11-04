@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class StudentRecord(models.Model):
+class Studentrecord(models.Model):
     student_name_en = models.CharField(max_length=200)
     student_name_th = models.CharField(max_length=200)
     student_ID = models.IntegerField(default=0)

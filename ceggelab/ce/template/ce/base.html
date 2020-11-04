@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Uncle Template</title>
+    <title>CEGGE</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/jumbotron/">
 
@@ -45,71 +45,69 @@
 
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style='background-color: #5d7697;'>
-        <!-- <nav class="navbar navbar-expand-md navbar-light fixed-top" style='background-color: #ffd666;'> -->
-        <!-- <a class="navbar-brand" href="#">Home</a> -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style='background-color: #5d7697;'>
+    <!-- <nav class="navbar navbar-expand-md navbar-light fixed-top" style='background-color: #ffd666;'> -->
+    <!-- <a class="navbar-brand" href="#">Home</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'home-p' %}">Home <span class="sr-only">(current)</span></a>
-                </li>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home-p' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about-p' %}">About</a>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about-p' %}">About</a>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'people-p' %}">People</a>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'people-p' %}">People</a>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'student-p' %}">Student</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contactus-p' %}">Contact Us</a>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'student-p' %}">Student</a>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'register-p' %}">Register</a>
-                </li>
-
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contactus-p' %}">Contact Us</a>
+            </li>
+        </ul>
+        <div>
+            {% if user.is_authenticated %}
+            <font color="white">Hello &nbsp {{user.first_name}} &nbsp&nbsp{{user.last_name}}</font>
+                &nbsp <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a class=" btn btn-primary" href="{% url 'register-p' %}">Register</a>
+            <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+            {% endif %}
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <main role="main">
+<main role="main">
 
-        <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="container">
-            <!-- Example row of columns -->
-            {% block content %}
-            {% endblock %}
-            <hr>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="container">
+        <!-- Example row of columns -->
+        {% block content %}
+        {% endblock %}
+        <hr>
 
-        </div> <!-- /container -->
+    </div> <!-- /container -->
 
-    </main>
+</main>
 
-    <footer class="container">
-        <p>&copy; 2020 CEGGE</p>
-    </footer>
+<footer class="container">
+    <p>&copy; 2020 CEGGE</p>
+</footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 </html>
