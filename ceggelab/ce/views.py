@@ -17,6 +17,10 @@ def People(request):
 
 #this page show data from models
 def Student(request):
-    student_ID = StudentRecord.objects.all() #pull data from models
+    student_ID = StudentRecord.objects.all() 
+    #pull data from models
     context = {'student_ID':student_ID}
     return render(request,'ce/student.html',context)    
+
+def Register(request):
+    return render(request,'ce/register.html')

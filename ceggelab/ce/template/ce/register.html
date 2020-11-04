@@ -1,0 +1,37 @@
+{% extends 'ce\base.html' %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h2>Centre of Excellence in Geotechnical and Geoenvironmental Engineering</h2>
+    <p>ศูนย์เชี่ยวชาญเฉพาะทางวิศวกรรมธรณีเทคนิคและธรณีสิ่งแวดล้อม<br></p>
+    <p>CHULALONGKORN UNIVERSITY, BANGKOK, THAILAND </p>
+</div>
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="name">Email address:</label>
+        <input type="text" class="form-control" placeholder="Enter name" id="name" name="name">
+    </div>
+
+    <div class="form-group">
+        <label for="lastname">Email address:</label>
+        <input type="text" class="form-control" placeholder="Enter lastname" id="lastname" name="lastname">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" placeholder="Enter email" id="email" name="email">
+    </div>
+
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" placeholder="Enter password" id="pwd" name ="pwd">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    
+</form>
+
+
+{% endblock %}
