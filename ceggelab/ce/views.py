@@ -27,17 +27,17 @@ def Register(request):
 
     if request.method == 'POST':
         data = request.POST.copy()
-        firstname = data.get('firstname')
-        lastname= data.get('lastname')
+        first_name = data.get('firstname')
+        last_name= data.get('lastname')
         email = data.get('email')
-        pwd = data.get('pwd')
+        password = data.get('pwd')
 
         newuser = User()
         newuser.username = email
-        newuser.firstname = firstname
-        newuser.lastname = lastname
+        newuser.firstname = first_name
+        newuser.lastname = last_name
         newuser.email=email
-        newuser.set_password(pwd)
+        newuser.set_password(password)
         newuser.save()
         return redirect('home-p')
 
