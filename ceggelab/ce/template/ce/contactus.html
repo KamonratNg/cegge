@@ -1,29 +1,50 @@
 {% extends 'ce/base.html' %}
 
 {% block content %}
+{% load static %}
 
-<div class="container" style="margin-top: 80px; margin-bottom: 50px">
-    <center>
-        <img src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.0-9/s960x960/58749336_2072042283088104_2352128170955636736_o.jpg?_nc_cat=101&ccb=2&_nc_sid=e3f864&_nc_eui2=AeF5-f6vMib_ZGsbSEBuKVQNjwpomNv_0G-PCmiY2__Qb73Hxu6yuPFlVhlXbQ3cMzKReToawrX_kU--5HB_TxQN&_nc_ohc=nTBkfyF1uVAAX98j-m5&_nc_ht=scontent.fbkk12-1.fna&tp=7&oh=ebcdbdc6039e115915dabe191b8e7f4a&oe=5FC6704B"style="width:100%>
+
+<center>
+        <img src="{% static '/images/cover page3.jpg' %}"
+            style="width:100%;margin-top: 80px">
     </center>
-</div>
+
 <div class="jumbotron text-center">
 
     <center>
-        <h3 style="color: #e47a2e;">Centre of Excellence in Geotechnical and Geoenvironmental Engineering</h3>
         
-            <p>Department of Civil Engineering, Chulalongkorn University, </p>
-            <p>254 Henri Dunant Rd, Pathum Wan, Pathum Wan District, Bangkok 10330, Thailand</p>
-            <p>E-mail: suched.l@chula.ac.th</p>
-            <p>Phone: 0-2218-6343</p>
+        <h3 style="color: #e47a2e;">Centre of Excellence in Geotechnical and Geoenvironmental Engineering</h3>
+        <p>Department of Civil Engineering, Chulalongkorn University </p> &nbsp;&nbsp;
 
-    <div class="elementor-element elementor-element-e9d848d elementor-widget elementor-widget-google_maps" data-id="e9d848d" data-element_type="widget" data-widget_type="google_maps.default">
-    <div class="elementor-widget-container">
-<div class="elementor-custom-embed">
-    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=civil%20engineering%2C%20chulalongkorn%20university&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" aria-label="civil engineering, chulalongkorn university"></iframe>
-</div>		
-</div>
-</center>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="{% static '/images/email.svg' %}" alt="" width="40">
+                <p style="margin-top: 20px" >E-mail: suched.l@chula.ac.th</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="{% static '/images/map.svg' %}" alt="" width="40">
+                <p style="margin-top: 20px" >254 Henri Dunant Rd, Pathum Wan, Pathum Wan District, Bangkok 10330, Thailand</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="{% static '/images/call.svg' %}" alt="" width="40">
+                <p style="margin-top: 20px" >Phone: 0-2218-6343</p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="elementor-element elementor-element-e9d848d elementor-widget elementor-widget-google_maps"
+            data-id="e9d848d" data-element_type="widget" data-widget_type="google_maps.default" style="margin-top: 20px" >
+            <div class="elementor-widget-container">
+                <div class="elementor-custom-embed">
+                    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        src="https://maps.google.com/maps?q=civil%20engineering%2C%20chulalongkorn%20university&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
+                        aria-label="civil engineering, chulalongkorn university"></iframe>
+                </div>
+            </div>
+    </center>
 </div>
 
 
